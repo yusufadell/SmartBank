@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{object.user_name}}'s details!
+{% endblock %}
+
+{% block content %}
+
+
+
+<h1>All {{object.user_name}}'s Transfers</h1>
+
+
+<a href="{% url 'money-trans' %}">Transfer Money</a>
+
+<h1>Total Transfers: {{object.transfer_sender.count}}</h1>
+{% for transfer in object.transfer_sender.all %}
+
+<ul>
+    <li>{{transfer.transfer_sender.user_name}} sends ${{transfer.transfer_amount}} to
+        {{transfer.transfer_receiver.user_name}} at {{transfer.transfer_created}}</li>
+</ul>
+{% endfor %}
+
+<h1>Total Reveives: {{object.transfer_receiver.count}}</h1>
+{% for transfer in object.transfer_receiver.all %}
+
+<ul>
+    <li>{{transfer.transfer_receiver.user_name}} receives ${{transfer.transfer_amount}} from
+        {{transfer.transfer_sender.user_name}} at {{transfer.transfer_created}}</li>
+</ul>
+{% endfor %}
+
+{% endblock %}
