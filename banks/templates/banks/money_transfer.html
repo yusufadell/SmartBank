@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
 
 {% block title %}
 Transfer Money
@@ -8,7 +10,7 @@ Transfer Money
 
 <h1>Money Transfer Goes Here!</h1>
 <form action="{%url 'money-trans'%}" method="POST">
-    {{form.as_p}}
+    {{form|crispy}}
     {% csrf_token %}
 
     <button type="submit">Send</button>

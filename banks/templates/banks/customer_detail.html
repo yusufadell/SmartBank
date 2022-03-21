@@ -7,28 +7,19 @@
 {% block content %}
 
 
+<div class="card w-75">
+    <div class="card-body">
+        <h5 class="card-title">{{object.user_name}}</h5>
+        {% for transfer in object.transfer_sender.all %}
 
-<h1>All {{object.user_name}}'s Transfers</h1>
+        <p class="card-text">{{transfer}}</p>
+        {% empty %}
+        <p class="card-text">No Transactions Yet!</p>
+        {% endfor %}
 
+        <a href="{% url 'money-trans' %}" class="btn btn-primary">Transfer Money</a>
 
-<a href="{% url 'money-trans' %}">Transfer Money</a>
-
-<h1>Total Transfers: {{object.transfer_sender.count}}</h1>
-{% for transfer in object.transfer_sender.all %}
-
-<ul>
-    <li>{{transfer.transfer_sender.user_name}} sends ${{transfer.transfer_amount}} to
-        {{transfer.transfer_receiver.user_name}} at {{transfer.transfer_created}}</li>
-</ul>
-{% endfor %}
-
-<h1>Total Reveives: {{object.transfer_receiver.count}}</h1>
-{% for transfer in object.transfer_receiver.all %}
-
-<ul>
-    <li>{{transfer.transfer_receiver.user_name}} receives ${{transfer.transfer_amount}} from
-        {{transfer.transfer_sender.user_name}} at {{transfer.transfer_created}}</li>
-</ul>
-{% endfor %}
-
+    </div>
+</div>
+<hr>
 {% endblock %}
