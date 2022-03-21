@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ry00cb&zi1^(5+e9icajm0izcvl--qpp0m0+$q0oke4e#*z&qz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["smart-transaction.herokuapp.com"]
 
 
 # Application definition
