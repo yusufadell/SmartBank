@@ -1,6 +1,7 @@
-from pyexpat import model
-from django.shortcuts import render, redirect
-from django.views.generic import ListView, DetailView
+from django.contrib import messages
+from django.shortcuts import redirect, render
+from django.views.generic import DetailView, ListView
+
 from .forms import MoneyTransferForm
 from .models import Customers
 
@@ -20,6 +21,7 @@ def money_transfer(request):
     if request.method == "POST":
         form = MoneyTransferForm(request.POST)
         if form.is_valid():
+            messages.success(request, 'Money transfered successful!!')
             form.save()
 
             # Get User Object from TransferForm
