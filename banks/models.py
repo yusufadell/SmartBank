@@ -15,7 +15,7 @@ class Customers(models.Model):
     account_number = models.AutoField(primary_key=True)
 
     def __str__(self):
-        return f"{self.account_number}- {self.user_name}'s Balance: ${self.balance} "
+        return f"{self.user_name} (${self.balance}) "
 
 
 class Transfers(models.Model):
@@ -32,5 +32,8 @@ class Transfers(models.Model):
     transfer_amount = models.DecimalField(max_digits=10, decimal_places=2)
     transfer_created = models.DateTimeField(auto_now_add=True, editable=False)
 
+    class Meta:
+        ordering = ('-transfer_created',)
+
     def __str__(self) -> str:
-        return f"{self.transfer_created} - {self.transfer_sender} sends ${self.transfer_amount} to {self.transfer_receiver}"
+        return f"{self.transfer_created.strftime('%X %x %Z')} - {self.transfer_sender} sends ${self.transfer_amount} to {self.transfer_receiver}"
