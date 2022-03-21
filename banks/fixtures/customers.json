@@ -1,0 +1,172 @@
+[
+   {
+      "model": "banks.customers",
+      "pk": 1,
+      "fields": {
+         "user": 2,
+         "user_name": "yusuf",
+         "email": "yusuf.dev@gmail.com",
+         "balance": "157308.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 2,
+      "fields": {
+         "user": 3,
+         "user_name": "yusuf1",
+         "email": "yusuf1.dev@gmail.com",
+         "balance": "697475.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 3,
+      "fields": {
+         "user": 4,
+         "user_name": "yusuf2",
+         "email": "yusuf.dev@gmail.com",
+         "balance": "99270.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 4,
+      "fields": {
+         "user": 5,
+         "user_name": "yusuf3",
+         "email": "yusuf3.dev@gmail.com",
+         "balance": "49320.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 5,
+      "fields": {
+         "user": 6,
+         "user_name": "yusuf4",
+         "email": "yusuf4.dev@gmail.com",
+         "balance": "824545.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 6,
+      "fields": {
+         "user": 7,
+         "user_name": "yusuf5",
+         "email": "yusuf5.dev@gmail.com",
+         "balance": "68908.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 7,
+      "fields": {
+         "user": 8,
+         "user_name": "yusuf6",
+         "email": "yusuf6.dev@gmail.com",
+         "balance": "92165.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 8,
+      "fields": {
+         "user": 9,
+         "user_name": "yusuf7",
+         "email": "yusuf7.de@gmail.com",
+         "balance": "66289.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 9,
+      "fields": {
+         "user": 10,
+         "user_name": "yusuf8",
+         "email": "yusuf8.dev@gmail.com",
+         "balance": "100000.00"
+      }
+   },
+   {
+      "model": "banks.customers",
+      "pk": 10,
+      "fields": {
+         "user": 11,
+         "user_name": "yusuf9",
+         "email": "yusuf9.dev@gmail.com",
+         "balance": "565400.00"
+      }
+   },
+   {
+      "model": "banks.transfers",
+      "pk": 1,
+      "fields": {
+         "transfer_sender": 2,
+         "transfer_receiver": 3,
+         "transfer_amount": "669.00",
+         "transfer_created": "2022-03-19T08:58:31.027Z"
+      }
+   },
+   {
+      "model": "banks.transfers",
+      "pk": 2,
+      "fields": {
+         "transfer_sender": 10,
+         "transfer_receiver": 2,
+         "transfer_amount": "465.00",
+         "transfer_created": "2022-03-19T09:03:21.507Z"
+      }
+   },
+   {
+      "model": "banks.transfers",
+      "pk": 3,
+      "fields": {
+         "transfer_sender": 1,
+         "transfer_receiver": 4,
+         "transfer_amount": "2445.00",
+         "transfer_created": "2022-03-20T22:14:22.605Z"
+      }
+   },
+   {
+      "model": "banks.transfers",
+      "pk": 4,
+      "fields": {
+         "transfer_sender": 2,
+         "transfer_receiver": 5,
+         "transfer_amount": "786786.00",
+         "transfer_created": "2022-03-20T22:17:44.223Z"
+      }
+   },
+   {
+      "model": "banks.transfers",
+      "pk": 5,
+      "fields": {
+         "transfer_sender": 3,
+         "transfer_receiver": 6,
+         "transfer_amount": "155.00",
+         "transfer_created": "2022-03-20T22:56:47.634Z"
+      }
+   },
+   {
+      "model": "banks.transfers",
+      "pk": 6,
+      "fields": {
+         "transfer_sender": 6,
+         "transfer_receiver": 9,
+         "transfer_amount": "999.00",
+         "transfer_created": "2022-03-21T09:49:29.045Z"
+      }
+   },
+   {
+      "model": "banks.transfers",
+      "pk": 7,
+      "fields": {
+         "transfer_sender": 9,
+         "transfer_receiver": 5,
+         "transfer_amount": "784.00",
+         "transfer_created": "2022-03-21T09:50:07.316Z"
+      }
+   }
+]
