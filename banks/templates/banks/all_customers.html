@@ -21,7 +21,13 @@ All Customers
             <th scope="row">{{customer.pk}}</th>
             <td><a href="{% url 'customer_detail' customer.pk %}">{{customer.user_name}}</a></td>
             <td>${{customer.balance}}</td>
+            {% if customer.transfer_sender.count > 0 %}
             <td>{{customer.transfer_sender.last.transfer_created}}</td>
+
+            {% else %}
+            <td> No Transactions Yet!</td>
+            {% endif %}
+
         </tr>
 
 
