@@ -5,13 +5,28 @@ All Customers
 {% endblock %}
 {% block content %}
 
-<h1>All Customers:</h1>
-<ul>
-    {% for customer in customers %}
-    <a href="{% url 'customer_detail' customer.pk %}">
-        <li>{{customer.user_name}}</li>
-    </a>
-    {% endfor %}
-</ul>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Balance</th>
+            <th scope="col">Last Transaction</th>
+        </tr>
+    </thead>
+    <tbody>
 
+        {% for customer in customers %}
+        <tr>
+            <th scope="row">{{customer.pk}}</th>
+            <td><a href="{% url 'customer_detail' customer.pk %}">{{customer.user_name}}</a></td>
+            <td>${{customer.balance}}</td>
+            <td>{{customer.transfer_sender.last.transfer_created}}</td>
+        </tr>
+
+
+        {% endfor %}
+
+    </tbody>
+</table>
 {% endblock %}
