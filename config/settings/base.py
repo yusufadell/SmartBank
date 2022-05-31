@@ -1,4 +1,3 @@
-# TODO: Make base, dev and prod settings files
 """
 Django settings for config project.
 
