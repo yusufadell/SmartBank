@@ -43,7 +43,7 @@ def money_transfer(request):
             transfer_sender.save()
             transfer_receiver.save()
 
-        return redirect("list-customers")
+        return redirect("customers_list")
     else:
         form = MoneyTransferForm()
     return render(request, "banks/money_transfer.html", {"form": form})
