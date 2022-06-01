@@ -33,6 +33,7 @@ DEBUG = env("DEBUG")
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -41,9 +42,34 @@ INSTALLED_APPS = [
     # 3rd pary
     'crispy_forms',
 
+    # django-allauth app
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    # social providers
+    "allauth.socialaccount.providers.github",
+    'allauth.socialaccount.providers.twitter',
+
+
     # My Apps
     'banks.apps.BanksConfig'
 ]
+
+AUTHENTICATION_BACKENDS = [
+
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+]
+
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION = "none"
+LOGIN_REDIRECT_URL = "home"
+ACCOUNT_LOGOUT_ON_GET = True
 
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
@@ -77,6 +103,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
