@@ -1,4 +1,4 @@
-django 
+django
 django-crispy-forms
 whitenoise
 django-heroku
