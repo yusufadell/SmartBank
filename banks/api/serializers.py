@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from ..models import Customers, Transfers
+from ..models import Customers
+from ..models import Transfers
 
 
 class TransfersSerializer(serializers.ModelSerializer):
