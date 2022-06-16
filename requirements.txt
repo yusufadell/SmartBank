@@ -1,6 +1,7 @@
-django 
+django
 django-crispy-forms
 whitenoise
 django-heroku
 gunicorn
 django-allauth
+djangorestframework==3.11.0
