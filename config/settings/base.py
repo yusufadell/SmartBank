@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     "allauth.socialaccount.providers.github",
     'allauth.socialaccount.providers.twitter',
 
-
+    # DRF
+    'rest_framework',
     # My Apps
     'banks.apps.BanksConfig'
 ]
@@ -74,6 +75,11 @@ ACCOUNT_LOGOUT_ON_GET = True
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
