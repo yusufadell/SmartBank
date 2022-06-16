@@ -1,10 +1,7 @@
 from django.urls import path
-from .views import (
-    TransfersListView,
-    TransfersDetailView,
-    CustomersListView,
-    CustomersDetailView,
-)
+
+from .views import (CustomersDetailView, CustomersListView,
+                    TransfersDetailView, TransfersListView)
 
 app_name = "banks"
 

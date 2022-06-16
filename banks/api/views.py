@@ -1,6 +1,7 @@
 from rest_framework import generics
-from ..models import Transfers, Customers
-from .serializers import TransfersSerializer, CustomersSerializer
+
+from ..models import Customers, Transfers
+from .serializers import CustomersSerializer, TransfersSerializer
 
 
 class TransfersListView(generics.ListCreateAPIView):
